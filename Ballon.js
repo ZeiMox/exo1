@@ -5,9 +5,11 @@ class Ballon {
 
   // Fonction interne pour réinitialiser le ballon (au début ou après explosion)
   reinitialiser() {
-    this.x = random(width);
-    this.y = random(height);
     this.rayon = random(20, 80); // Taille aléatoire fixe pour chaque ballon
+
+    this.x = random(this.rayon, width - this.rayon); // Position aléatoire en évitant les bords
+    this.y = random(this.rayon, height - this.rayon);
+
     this.couleur = random(palette); // On fixe la couleur
     this.vitesseX = random(-2, 2);
     this.vitesseY = random(-2, 2);
@@ -29,6 +31,15 @@ class Ballon {
   afficher() {
     fill(this.couleur);
     noStroke();
-    circle(this.x, this.y, this.rayon * 2);
+    ellipse(this.x, this.y, this.rayon * 2, this.rayon * 2.6); // Ovale pour les ballons
+
+    triangle(
+      this.x,
+      this.y + this.rayon * 1.3,
+      this.x - 8,
+      this.y + this.rayon * 1.3 + 12,
+      this.x + 8,
+      this.y + this.rayon * 1.3 + 12,
+    );
   }
 }
