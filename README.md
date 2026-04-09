@@ -28,26 +28,29 @@ L'intention principale est de créer une expérience ludique et visuellement sat
 
 ## 🤖 Traçabilité de l'usage de l'IA
 
-### i. Parties pour lesquelles j'ai utilisé une IA
+### I. Parties pour lesquelles j'ai utilisé une IA
 
-L'Intelligence Artificielle a été utilisée comme un tuteur de "pair-programming" pour :
+L'Intelligence Artificielle a été utilisée comme un dictionnaire interactif et un tuteur de "pair-programming" du code pour :
 
-- **La logique algorithmique :** Calcul des rebonds et gestion des listes d'objets (ballons et particules).
-- **Le débogage :** Compréhension des erreurs de chronologie dans le `setup()` et les problèmes de formats de couleurs.
-- **L'optimisation du Game Feel :** Concept de la hitbox élargie et calcul mathématique de l'explosion.
-- **La structure :** Refactorisation du code vers une architecture Orientée Objet (fichiers séparés).
+- **Génération de la base de code :** Création d'une première ébauche fonctionnelle en p5.js à partir de mes spécifications (variables, structure de la boucle principale).
 
-### ii. Prompt utilisé
+* **L'apprentissage de la syntaxe :** Comprendre comment structurer mes tableaux (`Array`) et mes boucles dans l'environnement p5.js.
+* **Le débogage :** M'aider à identifier des erreurs de chronologie dans l'initialisation de mes variables (ex: générer la palette avant de l'appeler).
+* **L'optimisation du Game Feel :** Me conseiller sur la logique mathématique pour créer un effet d'explosion (système de particules).
+* **L'architecture de fin de projet :** M'expliquer comment transformer le code procédural que j'avais écrit en une architecture Orientée Objet (fichiers séparés).
+
+### II. Prompt utilisé
 
 Dès le début, j'ai imposé un cadre strict pour ne pas que l'IA code à ma place :
 
 > _"Voici mes spécifications. Ne génère pas le code final. Aide-moi à coder étape par étape en m'expliquant chaque fonction p5.js dont j'ai besoin. Commence par la section Canvas."_
 
-### iii. Modifications que j'ai apportées
+### III. Mon travail d'écriture et les modifications apportées
 
-Bien que guidé par l'IA, j'ai pris toutes les décisions finales et effectué les ajustements suivants :
+Contrairement à une simple génération de code, j'ai été aux commandes de la rédaction. Voici mes apports réels :
 
-- **Design visuel :** J'ai entièrement dessiné la fléchette (coordonnées des lignes et triangles) pour qu'elle corresponde à mon idée.
+- **Écriture du code source :** J'ai rédigé moi-même la structure initiale du jeu (boucles, variables, conditions de rebonds et fonctions principales `setup` / `draw`) en me basant sur les explications théoriques de l'IA.
+- **Design visuel :** J'ai entièrement calculé et codé le dessin de la fléchette (coordonnées des lignes et triangles `translate`) pour qu'elle corresponde à mon idée.
 - **Équilibrage :** J'ai manuellement testé et fixé les plages de vitesse et de taille des ballons pour que le jeu ne soit ni trop lent, ni trop dur.
-- **Décision de Gameplay :** J'ai choisi d'ajouter la tolérance de **10 pixels** à la collision après avoir constaté en testant que les petits ballons étaient frustrants à viser.
-- **Documentation :** J'ai rédigé les commentaires explicatifs dans le code pour m'assurer de maîtriser la logique de chaque fonction.
+- **Décision de Gameplay :** J'ai choisi d'ajouter une tolérance de **10 pixels** à la distance de collision, après avoir constaté en testant mon propre code que les petits ballons étaient frustrants à viser.
+- **Documentation :** J'ai rédigé les commentaires explicatifs pour m'assurer de maîtriser la logique de chaque fonction avant de passer à l'architecture modulaire finale.
